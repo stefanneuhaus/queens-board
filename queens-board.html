@@ -1,0 +1,37 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<!--<link rel="import" href="../polymer/lib/elements/dom-if.html">-->
+<!--<link rel="import" href="../polymer/lib/elements/dom-repeat.html">-->
+
+<!--
+`queens-board`
+Representation of a chessboard with queens placed on it
+
+@demo demo/index.html
+-->
+
+<dom-module id="queens-board">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>I am a board of size [[size]].</h2>
+  </template>
+
+  <script>
+    /** @polymerElement */
+    class QueensBoard extends Polymer.Element {
+
+      static get is() { return 'queens-board'; }
+
+      static get properties() {
+        return {
+          size: Number
+        };
+      }
+    }
+
+    window.customElements.define(QueensBoard.is, QueensBoard);
+  </script>
+</dom-module>
